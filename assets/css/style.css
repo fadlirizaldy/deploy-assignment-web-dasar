@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic,700|Open+Sans:400,600,700");
+
+.accordion-toggle {
+  display: block;
+  transition: 0.4s;
+}
+
+.accordion-content {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.active,
+.accordion-toggle:hover {
+  background-color: #ccc;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+.rotated {
+  transform: rotate(90deg);
+}
+
+#modalPricing {
+  display: none;
+}
+
+.activate {
+  display: block !important;
+}

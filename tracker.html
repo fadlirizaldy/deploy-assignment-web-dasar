@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style-tracker.css" />
+    <title>Assignment Web Basic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="min-h-screen w-screen bg-gray-100 flex flex-col items-center justify-center py-16">
+      <a class="underline text-2xl mb-10" href="./index.html">Home</a>
+      <h1 class="text-3xl mb-10">Expense Tracker</h1>
+      <section class="w-[85%] sm:w-[450px] p-10 pb-12 rounded-tr-[70px] rounded-bl-[70px] rounded-tl-2xl rounded-br-2xl bg-white shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        <h3 class="text-2xl">YOUR BALANCE</h3>
+        <h2 id="balance" class="text-3xl font-semibold mt-2"></h2>
+
+        <div class="flex mt-8 justify-center">
+          <div class="border-r-[3px] border-slate-300 flex flex-col items-center px-5">
+            <h4 class="font-medium text-xl">INCOME</h4>
+            <p id="showed-income" class="w-full text-green-600 text-lg sm:text-xl text-center">+Rp 0</p>
+          </div>
+          <div class="flex flex-col items-center px-5">
+            <h4 class="font-medium text-xl">EXPENSE</h4>
+            <p id="showed-expense" class="w-full text-red-600 text-lg sm:text-xl text-center">-Rp 0</p>
+          </div>
+        </div>
+
+        <section class="mb-4">
+          <h2 class="text-2xl font-semibold mt-10">History</h2>
+          <hr class="h-0.5 my-2 bg-gray-200 border-0" />
+          <div id="history" class="flex flex-col gap-1 max-h-40 overflow-y-scroll"></div>
+        </section>
+
+        <form id="form-transaction">
+          <h2 class="text-2xl font-semibold mt-10">New Transcation</h2>
+          <hr class="h-0.5 my-2 bg-gray-200 border-0" />
+
+          <h3 class="text-lg sm:text-xl font-normal mt-5 mb-2">Transaction Details</h3>
+          <input name="detail" id="transaction-detail" required type="text" class="border-2 border-slate-300 w-full rounded-sm py-2 ps-2 pe-5" />
+
+          <h3 class="text-lg sm:text-xl font-normal mt-5 mb-2">Amount (negative - expense, positive - income)</h3>
+          <input name="amount" id="amount" required type="number" class="border-2 border-slate-300 w-full rounded-sm py-2 ps-2 pe-5" />
+
+          <button type="submit" class="w-full py-2 bg-blue-950 hover:bg-blue-900 rounded-lg text-white text-xl mt-3">Add transaction</button>
+        </form>
+      </section>
+    </section>
+    <script src="./assets/js/expense.js"></script>
+  </body>
+</html>
